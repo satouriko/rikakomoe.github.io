@@ -1,5 +1,4 @@
-@import "../../bower_components/font-awesome/scss/font-awesome.scss";
-@import "../../bower_components/unsemantic/assets/sass/unsemantic-grid-responsive.scss";
+@import "../../node_modules/unsemantic/assets/sass/unsemantic-grid-responsive.scss";
 
 @import "header.scss";
 @import "identities.scss";
@@ -12,7 +11,7 @@ body {
 }
 
 html {
-    background: url('../images/nat-pants.png');
+    background: url('../img/nat-pants.png');
     font-family: "Helvetica Neue", Helvetica, Arial, PingFangTC-Light, "Microsoft YaHei", 微软雅黑, "STHeiti Light", STXihei, "华文细黑", Heiti, 黑体, sans-serif;
 }
 
