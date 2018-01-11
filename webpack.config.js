@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-      'index': './src/js/index.js',
+      'index': './src/js/index.jsx',
   },
   output: {
     path: __dirname + '/public',
@@ -11,7 +11,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/,loader: "babel-loader",exclude: /(node_modules|bower_components)/ },
+      { test: /\.jsx?$/,loader: "babel-loader",exclude: /(node_modules|bower_components)/,query: { presets:['react'] } },
+      { test: /\.ya?ml$/,loader: "json-loader!yaml-loader" },
       { test: /\.scss$/,loader: "style-loader!css-loader!sass-loader" },
       { test: /\.css$/,loader: 'style-loader!css-loader' },
       { test: /\.(png|jpe?g|gif|svg)$/,loader: 'file-loader',options: { name: 'img/[name].[hash].[ext]' } },

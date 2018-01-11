@@ -14,12 +14,12 @@
 }
 
 
-.chem-element[element=sodium]::before {
+.chem-element::before {
     content: '??';
     font-size: .45em;
     vertical-align: -.5em;
 }
 
-.chem-element[element="sodium"]:hover {
+.chem-element:hover {
     background: #faa3a3;
 }

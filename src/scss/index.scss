@@ -36,15 +36,16 @@ html {
     text-decoration: none;
 }
 
-.host .link {
-    color: #ddd;
-    text-decoration: none;
-    transition-duration: .2s;
-}
-
-.host .link:hover {
-    color: #eee;
-    transition-duration: 200ms;
+.host,.copyright,.header {
+    .link {
+        color: #ddd;
+        text-decoration: none;
+        transition-duration: .2s;
+        &:hover {
+            color: #eee;
+            transition-duration: 200ms;
+        }
+    }
 }
 
 .main-container {
@@ -59,4 +60,22 @@ html {
 .section {
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125);
     margin: 1em 0;
+}
+
+span,i,ruby {
+    &::before {
+        content: ' ';
+    }
+}
+
+ruby {
+    margin-left: 0.5rem;
+}
+
+i {
+    margin-left: 4px;
+}
+
+small.tag {
+    margin-left: 0.5rem;
 }
