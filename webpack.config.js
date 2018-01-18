@@ -25,12 +25,6 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery",
-      Popper: ['popper.js', 'default'],
-    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
@@ -44,7 +38,7 @@ module.exports = {
       chunks: ['index']
     }),
   ],
-  devtool:'eval-source-map',
+  devtool:'eval',
   devServer: {
     contentBase: "./public/",
     historyApiFallback: true,
