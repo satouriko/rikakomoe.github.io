@@ -28,13 +28,12 @@ class App extends React.Component {
         this.state = {
             chTypes: ["简体中文", "繁體中文"],
             curChType: 0,
-            chType: "简体中文",
         };
     }
     handleLocaleChange(l, e) {
         if (l === "zh") {
             let nowChType = (this.state.curChType + 1) % 2;
-            this.setState({curChType: nowChType, chType: this.state.chTypes[nowChType]});
+            this.setState({curChType: nowChType});
         }
         this.props.onLocaleChange(l)
     }
@@ -80,7 +79,7 @@ class App extends React.Component {
                                     />
                                 </span>
                                 <span className="content">
-                                    <a href="javascript:;" className="link" onClick={(e) => this.handleLocaleChange("zh",e)}>{this.state.chType}</a> / {" "}
+                                    <a href="javascript:;" className="link" onClick={(e) => this.handleLocaleChange("zh",e)}>{this.state.chTypes[this.state.curChType]}</a> / {" "}
                                     <a href="javascript:;" className="link" onClick={(e) => this.handleLocaleChange("en",e)}>English</a> / {" "}
                                     <a href="javascript:;" className="link" onClick={(e) => this.handleLocaleChange("ja",e)}>日本語</a></span>
                             </div>
@@ -282,14 +281,26 @@ class App extends React.Component {
                         </span>
                     </div>
                     <div className="copyright">
-                        <FormattedMessage
-                            id='cpright'
-                        />{" "}
-                        © 2018&nbsp;
-                        <a className="link"
-                                  href="https://github.com/zhouziqunzzq/zhouziqunzzq.github.io"
-                                  target="_blank">zhouziqunzzq
-                        </a>
+                        <div>
+                            <FormattedMessage
+                                id='cpright'
+                            />{" "}
+                            © 2018&nbsp;
+                            <a className="link"
+                                      href="https://github.com/zhouziqunzzq/zhouziqunzzq.github.io"
+                                      target="_blank">zhouziqunzzq
+                            </a>
+                        </div>
+                        <span className="theme">
+                            <a className="link" href="https://github.com/rikakomoe/rikakomoe.github.io" target="_blank">
+                                <FormattedMessage
+                                    id='thanksTo'
+                                    values={{
+                                        author: 'rikakomoe',
+                                    }}
+                                />
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
