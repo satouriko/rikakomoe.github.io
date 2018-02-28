@@ -1,0 +1,95 @@
+body {
+    font-size: 1em;
+    margin: 0;
+}
+
+html {
+    background: url('../img/yosoro-color.png');
+    font-family: "Helvetica Neue", Helvetica, Arial, PingFangTC-Light, "Microsoft YaHei", 微软雅黑, "STHeiti Light", STXihei, "华文细黑", Heiti, 黑体, sans-serif;
+}
+
+.copyright {
+    background: #ac6ef3;
+    color: #ddd;
+    font-size: 0.9em;
+    line-height: 2em;
+    padding: 0.5em 1em;
+}
+
+.header .greeting .chem-element {
+    text-decoration: none;
+}
+
+.host {
+    background: #9996f3;
+    color: #ddd;
+    font-size: .9em;
+    padding: .75em 1em;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.hosting {
+    color: #eee;
+    text-decoration: none;
+}
+
+.host,.copyright,.header {
+    .link {
+        color: #ddd;
+        text-decoration: none;
+        transition-duration: .2s;
+        &:hover {
+            color: #eee;
+            transition-duration: 200ms;
+        }
+    }
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: 64em;
+}
+
+.no-wrap {
+    display: inline-block;
+}
+
+.section {
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125);
+    margin: 1em 0;
+    @media screen and (min-width: 1024px) {
+        opacity: 0.85;
+        -webkit-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        -ms-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        transition: all 0.6s;
+        &:hover {
+            left: -10em;
+            margin-left: -1em;
+            margin-right: -1em;
+            opacity: 1;
+        }
+    }
+}
+
+span,i,ruby {
+    &::before {
+        content: ' ';
+    }
+}
+
+ruby {
+    margin-left: 0.5rem;
+}
+
+i {
+    margin-left: 4px;
+}
+
+small.tag {
+    margin-left: 0.5rem;
+}
