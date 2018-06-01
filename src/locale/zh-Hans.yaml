@@ -10,6 +10,6 @@ weibo: 微博
 skills: 技能
 contacts: 社交网络
 hostBy: 托管于 {host}
-themeBy: 主题由 {author} 创作
+themeBy: 主题由 {author1} 和 {author2}
 cpright: 版权所有
-thanksTo: 特别鸣谢 {author}
+thanksTo: 在 {author} 创作的基础上修改而来

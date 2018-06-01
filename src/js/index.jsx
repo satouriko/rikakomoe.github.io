@@ -98,7 +98,7 @@ class App extends React.Component {
                                 <i aria-hidden="true" className="fa fa-chrome"></i>
                                 <span className="content">Chrome</span>
                             </div>
-                            <div alt="editor" className="label">
+                            <div alt="editor or ide" className="label">
                                 <i aria-hidden="true" className="fa fa-keyboard-o"></i>
                                 <span className="content">Jetbrains | Vim | Visual Studio | Codeblocks</span>
                             </div>
@@ -220,14 +220,14 @@ class App extends React.Component {
                     </h2>
                     <ul className="identities grid-50">
                         <li className="identity">
-                            <a href="https://github.com/zhouziqunzzq">
+                            <a href="https://github.com/zhouziqunzzq" target="_blank">
                                 <i aria-hidden="true" className="fa fa-github"></i>
                                 <span className="where">GitHub</span>
                                 <span className="link">@zhouziqunzzq</span>
                             </a>
                         </li>
                         <li className="identity">
-                            <a href="https://gitlab.com/zhouziqunzzq">
+                            <a href="https://gitlab.com/zhouziqunzzq" target="_blank">
                                 <i aria-hidden="true" className="fa fa-gitlab"></i>
                                 <span className="where">GitLab</span>
                                 <span className="link">@zhouziqunzzq</span>
@@ -270,14 +270,13 @@ class App extends React.Component {
                             />
                         </a>
                         <span className="theme">
-                            <a className="link" href="https://github.com/amphineko/amphineko">
-                                <FormattedMessage
-                                    id='themeBy'
-                                    values={{
-                                        author: 'amphineko',
-                                    }}
-                                />
-                            </a>
+                            <FormattedMessage
+                                id='themeBy'
+                                values={{
+                                    author1: <a className="link" href="https://github.com/rikakomoe/rikakomoe.github.io" target="_blank">rikakomoe</a>,
+                                    author2: <a className="link" href="https://github.com/zhouziqunzzq/zhouziqunzzq.github.io" target="_blank">zhouziqunzzq</a>,
+                                }}
+                            />
                         </span>
                     </div>
                     <div className="copyright">
@@ -287,19 +286,17 @@ class App extends React.Component {
                             />{" "}
                             © 2018&nbsp;
                             <a className="link"
-                                      href="https://github.com/zhouziqunzzq/zhouziqunzzq.github.io"
-                                      target="_blank">zhouziqunzzq
+                               href="https://github.com/zhouziqunzzq/zhouziqunzzq.github.io"
+                               target="_blank">zhouziqunzzq
                             </a>
                         </div>
                         <span className="theme">
-                            <a className="link" href="https://github.com/rikakomoe/rikakomoe.github.io" target="_blank">
-                                <FormattedMessage
-                                    id='thanksTo'
-                                    values={{
-                                        author: 'rikakomoe',
-                                    }}
-                                />
-                            </a>
+                            <FormattedMessage
+                                id='thanksTo'
+                                values={{
+                                    author: <a className="link" href="https://github.com/amphineko/amphineko" target="_blank">amphineko</a>,
+                                }}
+                            />
                         </span>
                     </div>
                 </div>
