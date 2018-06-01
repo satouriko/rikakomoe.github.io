@@ -5,10 +5,12 @@ lang: 語言
 currentEdu: 在讀
 operation: 運維
 machineLearning: 機器學習
+deepLearning: 深度學習（DNN | CNN | RNN）
 twitter: 推特
 weibo: 微博
 skills: 技能
 contacts: 社群網站
 hostBy: 託管於 {host}
-themeBy: 主題由 {author} 創作
+themeBy: 主題由 {author1} 和 {author2}
 cpright: 版權所有
+thanksTo: 在 {author} 創作的基礎上修改而來

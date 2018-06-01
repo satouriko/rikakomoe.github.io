@@ -5,10 +5,12 @@ lang: 言語
 currentEdu: 現在の学校
 operation: 運用
 machineLearning: 機械学習
+deepLearning: 深度学習（DNN | CNN | RNN）
 twitter: ツイッター
 weibo: ウェイボー
 skills: スキル
 contacts: ソーシャルネットワーク
 hostBy: ホステッド {host}
-themeBy: テーマは {author} によって作成されています
+themeBy: テーマは {author1} と {author2} によって変更され
 cpright: すべての権利を保有
+thanksTo: "{author} の原作に基づいています"

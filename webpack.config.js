@@ -25,12 +25,6 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      except: ['$super', '$', 'exports', 'require']
-    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: __dirname + "/src/tmpl/index.html",
@@ -38,10 +32,32 @@ module.exports = {
       chunks: ['index']
     }),
   ],
-  devtool:'eval',
+  devtool:'#eval-source-map',
   devServer: {
     contentBase: "./public/",
     historyApiFallback: true,
     inline: true
   },
 };
+
+if (process.env.NODE_ENV === 'production') {
+    module.exports.devtool = '#source-map';
+    // http://vue-loader.vuejs.org/en/workflow/production.html
+    module.exports.plugins = (module.exports.plugins || []).concat([
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"',
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            compress: {
+                warnings: false
+            },
+            except: ['$super', '$', 'exports', 'require']
+        }),
+        new webpack.LoaderOptionsPlugin({
+            minimize: true
+        })
+    ])
+}

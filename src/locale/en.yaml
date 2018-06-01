@@ -5,10 +5,12 @@ lang: Lang
 currentEdu: Current
 operation: Operation
 machineLearning: Machine Learning
+deepLearning: Deep Learning（DNN | CNN | RNN）
 twitter: Twitter
 weibo: Weibo
 skills: skills
 contacts: social networks
 hostBy: Hosted by {host}
-themeBy: Theme by {author}
+themeBy: Theme is modified by {author1} and {author2}
 cpright: Copyright
+thanksTo: Based on the original works of {author}

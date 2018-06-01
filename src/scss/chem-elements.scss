@@ -10,16 +10,12 @@
 
 .chem-element:hover {
     box-shadow: 0 0 0.2em 0.2em rgba(255,255,255,.05);
+    background: #faa3a3;
     transform: translate(1em,1em);
 }
-
 
 .chem-element::before {
     content: '??';
     font-size: .45em;
     vertical-align: -.5em;
-}
-
-.chem-element:hover {
-    background: #faa3a3;
 }

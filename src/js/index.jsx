@@ -76,7 +76,7 @@ class App extends React.Component {
                                     <a href="javascript:;" className="link" onClick={(e) => this.handleLocaleChange("en",e)}>English</a> / {" "}
                                     <a href="javascript:;" className="link" onClick={(e) => this.handleLocaleChange("ja",e)}>日本語</a></span>
                             </div>
-                            <div alt="education" className="label">
+                            <a alt="education" className="label" href="http://www.neu.edu.cn/">
                                 <i aria-hidden="true" className="fa fa-university"></i>
                                 <span className="title">
                                     <FormattedMessage
@@ -84,16 +84,16 @@ class App extends React.Component {
                                     />
                                 </span>
                                 <span className="content">Northeastern University(CN)</span>
-                            </div>
+                            </a>
                         </div>
                         <div className="labels">
                             <div alt="browser" className="label">
                                 <i aria-hidden="true" className="fa fa-chrome"></i>
                                 <span className="content">Chrome</span>
                             </div>
-                            <div alt="editor" className="label">
+                            <div alt="editor or ide" className="label">
                                 <i aria-hidden="true" className="fa fa-keyboard-o"></i>
-                                <span className="content">Jetbrains</span>
+                                <span className="content">Vim | Jetbrains</span>
                             </div>
                             <div alt="spaces or tabs" className="label">
                                 <i aria-hidden="true" className="fa fa-i-cursor"></i>
@@ -135,14 +135,20 @@ class App extends React.Component {
                     <ul className="identities grid-50">
                         <li className="identity">
                             <a href="#!">
-                                <i aria-hidden="true" className="fa fa-html5"></i>
-                                <span className="where">HTML</span>
+                                <i aria-hidden="true" className="fa fa-keyboard-o"></i>
+                                <span className="where">C | C++ | C# | Python | Golang</span>
                             </a>
                         </li>
                         <li className="identity">
                             <a href="#!">
-                                <i aria-hidden="true" className="fa fa-css3"></i>
-                                <span className="where">CSS</span>
+                                <i aria-hidden="true" className="fa fa-html5"></i>
+                                <span className="where">HTML | CSS | JavaScript | Vue.js</span>
+                            </a>
+                        </li>
+                        <li className="identity">
+                            <a href="#!">
+                                <i aria-hidden="true" className="fa fa-cubes"></i>
+                                <span className="where">PHP | MySQL | Laravel</span>
                             </a>
                         </li>
                     </ul>
@@ -163,6 +169,16 @@ class App extends React.Component {
                                 <span className="where">
                                     <FormattedMessage
                                         id='machineLearning'
+                                    />
+                                </span>
+                            </a>
+                        </li>
+                        <li className="identity">
+                            <a href="#!">
+                                <i aria-hidden="true" className="fa fa-gears"></i>
+                                <span className="where">
+                                    <FormattedMessage
+                                        id='deepLearning'
                                     />
                                 </span>
                             </a>
@@ -192,14 +208,14 @@ class App extends React.Component {
                     </h2>
                     <ul className="identities grid-50">
                         <li className="identity">
-                            <a href="https://github.com/rikakomoe">
+                            <a href="https://github.com/rikakomoe" target="_blank">
                                 <i aria-hidden="true" className="fa fa-github"></i>
                                 <span className="where">GitHub</span>
                                 <span className="link">@rikakomoe</span>
                             </a>
                         </li>
                         <li className="identity">
-                            <a href="https://gitlab.com/rikakomoe">
+                            <a href="https://gitlab.com/rikakomoe" target="_blank">
                                 <i aria-hidden="true" className="fa fa-gitlab"></i>
                                 <span className="where">GitLab</span>
                                 <span className="link">@rikakomoe</span>
@@ -208,7 +224,7 @@ class App extends React.Component {
                     </ul>
                     <ul className="identities grid-50">
                         <li className="identity">
-                            <a href="https://twitter.com/rikakomoe">
+                            <a href="https://twitter.com/rikakomoe" target="_blank">
                                 <i aria-hidden="true" className="fa fa-twitter"></i>
                                 <span className="where">
                                     <FormattedMessage
@@ -219,14 +235,14 @@ class App extends React.Component {
                             </a>
                         </li>
                         <li className="identity">
-                            <a href="https://weibo.com/u/3126581945">
+                            <a href="https://weibo.com/u/3126581945" target="_blank">
                                 <i aria-hidden="true" className="fa fa-weibo"></i>
                                 <span className="where">
                                     <FormattedMessage
                                         id='weibo'
                                     />
                                 </span>
-                                <span className="link">咬一口梨子</span>
+                                <span className="link">蜜柑味的梨子酱</span>
                             </a>
                         </li>
                     </ul>
@@ -242,21 +258,34 @@ class App extends React.Component {
                             />
                         </a>
                         <span className="theme">
-                            <a className="link" href="https://github.com/amphineko/amphineko">
-                                <FormattedMessage
-                                    id='themeBy'
-                                    values={{
-                                        author: 'amphineko',
-                                    }}
-                                />
-                            </a>
+                            <FormattedMessage
+                                id='themeBy'
+                                values={{
+                                    author1: <a className="link" href="https://github.com/rikakomoe/rikakomoe.github.io" target="_blank">rikakomoe</a>,
+                                    author2: <a className="link" href="https://github.com/zhouziqunzzq/zhouziqunzzq.github.io" target="_blank">zhouziqunzzq</a>,
+                                }}
+                            />
                         </span>
                     </div>
                     <div className="copyright">
-                        <FormattedMessage
-                            id='cpright'
-                        />{" "}
-                        © 2018 <a className="link" href="https://github.com/rikakomoe/rikakomoe.github.io">rikakomoe</a>
+                        <div>
+                            <FormattedMessage
+                                id='cpright'
+                            />{" "}
+                            © 2018&nbsp;
+                            <a className="link"
+                                      href="https://github.com/rikakomoe/rikakomoe.github.io"
+                                      target="_blank">rikakomoe
+                            </a>
+                        </div>
+                        <span className="theme">
+                            <FormattedMessage
+                                id='thanksTo'
+                                values={{
+                                    author: <a className="link" href="https://github.com/amphineko/amphineko" target="_blank">amphineko</a>,
+                                }}
+                            />
+                        </span>
                     </div>
                 </div>
             </div>
